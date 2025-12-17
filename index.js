@@ -1,9 +1,7 @@
-
-const elements = ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon", "Sodium", "Magnesium", "Aluminium", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium", "Calcium"]
 let resultEl = document.getElementById("result-el")
 let errorEl = document.getElementById("error-el")
-
-const atomicMasses = {
+// variables
+const atomicMasses = { // atomic masses list
         Hydrogen: 1,
         Helium: 4,
         Lithium: 7,
@@ -23,23 +21,30 @@ const atomicMasses = {
         Chlorine: 35.5,
         Argon: 40,
         Potassium: 39,
-        Calcium: 45
+        Calcium: 40
     }
 
-function getRelativeAtomicMass() {
-    const elementInputEl = document.getElementById("element-input");
-    const userElementValue = elementInputEl.value;
+function getRelativeFormulaMass() {
+    const elementInputEl = document.getElementById("element-input"); // input box for the element
+    const userElementValue = elementInputEl.value; // read user inputted value off of the inpux box (line above)
 
-    const multiplierInputEl = document.getElementById("number-of-element-input");
-    const userMultiplierEl = multiplierInputEl.value;
+    const multiplierInputEl = document.getElementById("number-of-element-input"); // input box for the multiplier (molecules)
+    const userMultiplierEl = multiplierInputEl.value; // read value off of multiplier
     
-    const withMolecules = Number(atomicMasses[userElementValue] * userMultiplierEl);
+    if (!userMultiplierEl || userMultiplierEl <= 0) {
+    errorEl.textContent = "Please enter a valid number of molecules";
+    resultEl.textContent = "";
+    return;
+}
+// check user validity 
 
-    if (userElementValue in atomicMasses) {
+    if (userElementValue in atomicMasses) { // check user validity
+
+        const formulaMass = Number(atomicMasses[userElementValue] * userMultiplierEl); // atomic mass * number of molecules
         errorEl.textContent = "";
-        resultEl.textContent = `Relative atomic mass: ${withMolecules}`;
+        resultEl.textContent = `Relative formula mass: ~${formulaMass}`;
     } else {
         resultEl.textContent = "";
-        errorEl.textContent = `Element "${userElementValue}" not found`;
+        errorEl.textContent = `Element "${userElementValue}" not found (*please enter initial letter of element as Capital (f.e 'Boron', not 'boron'))`; // error message
     }
 }
