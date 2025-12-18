@@ -1,4 +1,3 @@
-
 body {
     font-family:'Courier New', Courier, monospace;
 }
@@ -14,21 +13,4 @@ body {
     background-color: #bababa;
     padding-left: 1em;
     padding-right: 1em;
-}
-
-#user-inputs {
-    display: flex;
-    gap: 2em;
-    flex-wrap: wrap;
-}
-
-#number-of-element-input, #element-input {
-    border: 1.5px solid black;
-    border-radius: 10px;
-    font-size: 1rem;
-    padding: 0.6rem;
-}
-
-.buttons {
-   border: 1.5px solid black; 
 }
