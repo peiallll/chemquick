@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -72,4 +73,58 @@
 
 
 
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <title>ChemQuick - Calculator</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <section id="main-container">
+        <h2 id="main-title">ChemQuick - <em>a fast chemistry calculator tool.</em></h2>
+        <div id="user-inputs">
+            <input type="number" placeholder="How Many?" size="9" id="number-of-element-input">
+            <p>molecules of..</p>
+            <input list="elements" placeholder="Search for element..." id="element-input">
+        </div>
+
+        <datalist id="elements">
+            <option value="Hydrogen">
+            <option value="Helium">
+            <option value="Sodium">
+            <option value="Beryllium">
+            <option value="Boron">
+            <option value="Carbon">
+            <option value="Nitrogen">
+            <option value="Oxygen">
+            <option value="Fluorine">
+            <option value="Neon">
+            <option value="Sodium">
+            <option value="Magnesium">
+            <option value="Aluminium">
+            <option value="Silicon">
+            <option value="Phosphorus"></option>
+            <option value="Sulfur"></option>
+            <option value="Chlorine"></option>
+            <option value="Argon"></option>
+            <option value="Pottasium"></option>
+            <option value="Calcium"></option>
+        </datalist>
+
+        <button id="ram-btn" onclick="getRelativeAtomicMass()">Get Relative Atomic Mass</button>
+
+        <p id="result-el">Relative Atomic Mass: </p>
+        
+        <p id="error-el"></p>
+    </section>
+</body>
+
+>>>>>>> 959d6f8 (added little styling, polishing, comments)
 </html>

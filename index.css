@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family:'Courier New', Courier, monospace;
 }
@@ -15,4 +16,30 @@ body {
 #user-inputs {
     display: flex;
     gap: 1em;
+=======
+body {
+    font-family:'Courier New', Courier, monospace;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 2em;
+    gap: 1em;
+    background-color: #bababa
+}
+
+#user-inputs {
+    display: flex;
+    gap: 2em;
+}
+
+#number-of-element-input, #element-input {
+    border: 1.5px solid black;
+    border-radius: 10px;
+
+>>>>>>> 959d6f8 (added little styling, polishing, comments)
 }
