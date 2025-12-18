@@ -11,15 +11,20 @@ body {
     height: 100vh;
     padding-top: 2em;
     gap: 1em;
-    background-color: #bababa
+    background-color: #bababa;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #user-inputs {
     display: flex;
     gap: 2em;
+    flex-wrap: wrap;
 }
 
 #number-of-element-input, #element-input {
     border: 1.5px solid black;
     border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.6rem;
 }
