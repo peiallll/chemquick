@@ -24,7 +24,7 @@ const atomicMasses = { // atomic masses list
         Calcium: 40
     }
 
-function getRelativeAtomicMass() {
+function getRelativeFormulaMass() {
     const elementInputEl = document.getElementById("element-input"); // input box for the element
     const userElementValue = elementInputEl.value; // read user inputted value off of the inpux box (line above)
 
@@ -40,9 +40,9 @@ function getRelativeAtomicMass() {
 
     if (userElementValue in atomicMasses) { // check user validity
 
-        const withMolecules = Number(atomicMasses[userElementValue] * userMultiplierEl); // atomic mass * number of molecules
+        const formulaMass = Number(atomicMasses[userElementValue] * userMultiplierEl); // atomic mass * number of molecules
         errorEl.textContent = "";
-        resultEl.textContent = `Relative atomic mass: ~${withMolecules}`;
+        resultEl.textContent = `Relative formula mass: ~${formulaMass}`;
     } else {
         resultEl.textContent = "";
         errorEl.textContent = `Element "${userElementValue}" not found (*please enter initial letter of element as Capital (f.e 'Boron', not 'boron'))`; // error message
