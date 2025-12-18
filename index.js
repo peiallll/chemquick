@@ -33,9 +33,9 @@ function getRelativeAtomicMass() {
     const multiplierInputEl = document.getElementById("number-of-element-input"); // input box for the multiplier (molecules)
     const userMultiplierEl = multiplierInputEl.value; // read value off of multiplier
     
-    const withMolecules = Number(atomicMasses[userElementValue] * userMultiplierEl); // atomic mass * number of molecules
-
     if (userElementValue in atomicMasses) { // check for user input validility
+
+        const withMolecules = Number(atomicMasses[userElementValue] * userMultiplierEl); // atomic mass * number of molecules
         errorEl.textContent = "";
         resultEl.textContent = `Relative atomic mass: ${withMolecules}`;
     } else {
