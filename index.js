@@ -1,5 +1,3 @@
-const elements = ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon", "Sodium", "Magnesium", "Aluminium", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium", "Calcium"]
-
 let resultEl = document.getElementById("result-el")
 let errorEl = document.getElementById("error-el")
 // variables
@@ -23,7 +21,7 @@ const atomicMasses = { // atomic masses list
         Chlorine: 35.5,
         Argon: 40,
         Potassium: 39,
-        Calcium: 45
+        Calcium: 40
     }
 
 function getRelativeAtomicMass() {
@@ -33,11 +31,18 @@ function getRelativeAtomicMass() {
     const multiplierInputEl = document.getElementById("number-of-element-input"); // input box for the multiplier (molecules)
     const userMultiplierEl = multiplierInputEl.value; // read value off of multiplier
     
-    if (userElementValue in atomicMasses) { // check for user input validility
+    if (!userMultiplierEl || userMultiplierEl <= 0) {
+    errorEl.textContent = "Please enter a valid number of molecules";
+    resultEl.textContent = "";
+    return;
+}
+// check user validity 
+
+    if (userElementValue in atomicMasses) { // check user validity
 
         const withMolecules = Number(atomicMasses[userElementValue] * userMultiplierEl); // atomic mass * number of molecules
         errorEl.textContent = "";
-        resultEl.textContent = `Relative atomic mass: ${withMolecules}`;
+        resultEl.textContent = `Relative atomic mass: ~${withMolecules}`;
     } else {
         resultEl.textContent = "";
         errorEl.textContent = `Element "${userElementValue}" not found (*please enter initial letter of element as Capital (f.e 'Boron', not 'boron'))`; // error message
