@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemQuick - Calculator</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <section id="main-container">
+        <h2 id="main-title">ChemQuick - <em>a fast chemistry calculator tool.</em></h2>
+        <div id="user-inputs">
+            <input type="number" placeholder="How Many?" size="9" id="number-of-element-input">
+            <p>molecules of..</p>
+            <input list="elements" placeholder="Search for element..." id="element-input">
+        </div>
+
+        <datalist id="elements">
+            <option value="Hydrogen">
+            <option value="Helium">
+            <option value="Lithium">
+            <option value="Beryllium">
+            <option value="Boron">
+            <option value="Carbon">
+            <option value="Nitrogen">
+            <option value="Oxygen">
+            <option value="Fluorine">
+            <option value="Neon">
+            <option value="Sodium">
+            <option value="Magnesium">
+            <option value="Aluminium">
+            <option value="Silicon">
+            <option value="Phosphorus">
+            <option value="Sulfur">
+            <option value="Chlorine">
+            <option value="Argon">
+            <option value="Potassium">
+            <option value="Calcium">
+        </datalist>
+
+        <div class="buttons">
+            <button id="rfm-btn" onclick="getRelativeFormulaMass()">Get Relative Formula Mass</button>
+        </div>
+
+        <p id="result-el">Relative Formula Mass: </p>
+        
+        <p id="error-el"></p>
+    </section>
+</body>
+
+</html>
