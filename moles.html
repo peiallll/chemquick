@@ -1,0 +1,42 @@
+<!--moles = mass / formula mass-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moles</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="moles.js" defer></script>
+</head>
+
+<body>
+    <div id="navigation">
+        <p><a href="index.html"><i>back to home</i></a></p>
+        <p> | </p>
+        <p><a href="rfm.html"><i>Relative Formula Mass</i></a></p>
+        <p> | </p>
+        <p><a href="rim.html"><i>Relative Atomic Mass</i></a></p>
+    </div>
+
+    <section id="main-container">
+        <h1 id="main-title">Moles - <em>(Avogadro's Number)</em></h1>
+
+        <div id="second-row">
+            <input type="number" placeholder="Mass Of Sample... (g)" id="mass-of-sample-input">
+        </div>
+
+        <div id="third-row">
+            <input type="number" placeholder="Formula mass... (g/mol)" id="formula-mass-input">
+        </div>
+
+
+        <div class="buttons">
+            <button id="submit-btn" onclick="getMoles()">Get Number Of Moles</button>
+        </div>
+
+        <p id="result-el">Result: </p>
+        <p id="previous-el">Previous: </p>
+        <p id="error-el"></p>
+    </section>
+</body>

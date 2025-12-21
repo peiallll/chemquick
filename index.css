@@ -32,18 +32,16 @@ html, body {
     border-top: 3px solid black;
 } 
 
+#error-el {
+    color: #c0392b; 
+    font-weight: bold;
+}
+
 #user-inputs {
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
 }
-
-#number-of-element-input, #element-input, #input-mass1-el, #input-abundancy1-el, #input-mass2-el, #input-abundancy2-el {
-    border: 2px solid #c4d7e0;
-    border-radius: 10px;
-    font-size: 1rem;
-    padding: 0.6rem;
-} 
 
 #result-el {
     text-align: center;
@@ -51,6 +49,13 @@ html, body {
     max-width: 480px;
     margin: 0.2rem auto 0;
 }
+
+#number-of-element-input, #element-input, #input-mass1-el, #input-abundancy1-el, #input-mass2-el, #input-abundancy2-el, #mass-of-sample-input, #formula-mass-input {
+    border: 2px solid #c4d7e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.6rem;
+} 
 
 .info-box {
   width: 25em;
@@ -79,10 +84,8 @@ html, body {
     background: #9db6c9;
 }
 
-#error-el {
-    color: #c0392b;
-    font-weight: bold;
-}
+
+
 
 li {
     margin: 50px 0;
