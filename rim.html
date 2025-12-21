@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Atomic Mass</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="rim.js" defer></script>
+</head>
+<section id="main-container">
+        <h2 id="main-title">RAM - <em>Relative Atomic Mass</em></h2>
+        <div id="first-row">
+            <input list="elements" placeholder="Select Element..." id="input-element-el">
+        </div>
+        <div id="second-row">
+            <input type="number" placeholder="Mass of Isotope 1..." id="input-mass1-el">
+            <input type="number" placeholder="Abundancy of Isotope 1...(%)" id="input-abundancy1-el">
+            <p>%</p>
+        </div>
+        <div id="third-row">
+            <input type="number" placeholder="Mass of Isotope 2..." id="input-mass2-el">
+            <input type="number" placeholder="Abundancy of Isotope 2...(%)" id="input-abundancy2-el">
+            <p>%</p>
+        </div>
+        
+        <datalist id="elements">
+            <option value="Hydrogen">
+            <option value="Helium">
+            <option value="Lithium">
+            <option value="Beryllium">
+            <option value="Boron">
+            <option value="Carbon">
+            <option value="Nitrogen">
+            <option value="Oxygen">
+            <option value="Fluorine">
+            <option value="Neon">
+            <option value="Sodium">
+            <option value="Magnesium">
+            <option value="Aluminium">
+            <option value="Silicon">
+            <option value="Phosphorus">
+            <option value="Sulfur">
+            <option value="Chlorine">
+            <option value="Argon">
+            <option value="Potassium">
+            <option value="Calcium">
+        </datalist>
+
+        <div class="buttons">
+            <button id="rfm-btn" onclick="getRelativeIsotopicMass()">Get Relative Atomic Mass</button>
+        </div>
+
+        <p id="result-el">Relative Atomic Mass: </p>
+        
+        <p id="error-el"></p>
+    </section>
+</body>
+
+</html>

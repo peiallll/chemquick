@@ -22,7 +22,7 @@ body {
     flex-wrap: wrap;
 }
 
-#number-of-element-input, #element-input {
+#number-of-element-input, #element-input, #input-mass1-el, #input-abundancy1-el, #input-mass2-el, #input-abundancy2-el {
     border: 1.5px solid black;
     border-radius: 10px;
     font-size: 1rem;
@@ -30,5 +30,20 @@ body {
 }
 
 .buttons {
-   border: 1.5px solid black; 
+   border: 1.5px solid black;
+   max-width: 480px; 
+   margin: 0 auto;    
+
+}
+
+.buttons button {
+    display: block;
+    margin: 0.4rem auto;
+}
+
+#result-el {
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    margin: 0.2rem auto 0;
 }
