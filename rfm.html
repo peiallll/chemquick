@@ -11,7 +11,11 @@
 </head>
 
 <body>
-    <p id="nav-el"><a href="index.html"><i>| back to home |</i></a></p>
+    <div id="navigation">
+        <p><a href="index.html"><i>back to home</i></a></p>
+        <p> | </p>
+        <p><a href="rim.html"><i>Relative Atomic Mass</i></a></p>
+    </div>
     <section id="main-container">
         <h1 id="main-title">RFM - <em>Relative Formula Mass</em></h1>
         <div id="user-inputs">
@@ -75,7 +79,7 @@
         </datalist>
 
         <div class="buttons">
-            <button id="rfm-btn" onclick="getRelativeFormulaMass()">Get Relative Formula Mass</button>
+            <button id="submit-btn" onclick="getRelativeFormulaMass()">Get Relative Formula Mass</button>
         </div>
 
         <p id="result-el">Result: </p>

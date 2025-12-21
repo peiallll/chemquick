@@ -36,7 +36,7 @@ function getRelativeIsotopicMass() {
     arrValues = [userElement, isotope1Mass, isotope1Abundancy, isotope2Mass, isotope2Abundancy]
 
     if (isBlank()) {
-        resultEl.textContent = ""
+        resultEl.textContent = "Result: "
         errorEl.textContent = "You left a field blank."
         return;
     }

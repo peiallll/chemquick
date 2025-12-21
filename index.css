@@ -26,10 +26,10 @@ html, body {
     min-height: 100vh;
     padding-top: 2em;
     gap: 1em;
-    background-color: #ffffff;
+    background-color: #f4f7fb;
     padding-left: 1em;
     padding-right: 1em;
-    border-top: 3px solid #2b4758;
+    border-top: 3px solid black;
 } 
 
 #user-inputs {
@@ -39,7 +39,7 @@ html, body {
 }
 
 #number-of-element-input, #element-input, #input-mass1-el, #input-abundancy1-el, #input-mass2-el, #input-abundancy2-el {
-    border: 1.5px solid #c4d7e0;
+    border: 2px solid #c4d7e0;
     border-radius: 10px;
     font-size: 1rem;
     padding: 0.6rem;
@@ -50,10 +50,6 @@ html, body {
     width: 100%;
     max-width: 480px;
     margin: 0.2rem auto 0;
-}
-
-#nav-el {
-    text-align: center;
 }
 
 .info-box {
@@ -69,12 +65,19 @@ html, body {
   padding: 2em;
 } 
 
-#rim-button {
-    border: 3px dotted #2b6f91;
-    border-radius: 5px;
+#submit-btn {
+    border: 1.5px solid black;
+    border-radius: 1rem;
     padding: 0.5em;
-    color: #0b3d55;
+    background-color: #eaf6ff;
+    font-weight: bold;
+    transition: transform 0.15s ease, background 0.2s ease;
 } 
+
+#submit-btn:hover { 
+    transform: scale(1.05);
+    background: #9db6c9;
+}
 
 #error-el {
     color: #c0392b;
@@ -89,4 +92,15 @@ li {
     padding-bottom: 0.5rem;
     border: 1px solid black;
     border-radius: 1rem;
+}
+
+#notice {
+    opacity: 0.725;
+}
+
+#navigation {
+    width: 100vw;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,15 @@
     <link rel="stylesheet" href="index.css">
     <script src="rim.js" defer></script>
 </head>
+
 <body>
-    
-    <p id="nav-el"><a href="index.html"><i>| back to home |</i></a></p>
+    <div id="navigation">
+        <p><a href="index.html"><i>back to home</i></a></p>
+        <p> | </p>
+        <p><a href="rfm.html"><i>Relative Formula Mass</i></a></p>
+    </div>
     <section id="main-container">
+        
         <h1 id="main-title">RAM - <em>Relative Atomic Mass</em></h1>
         <div id="first-row">
             <input list="elements" placeholder="Select Element..." id="input-element-el">
@@ -18,12 +24,11 @@
         <div id="second-row">
             <input type="number" placeholder="Mass of Isotope 1..." id="input-mass1-el">
             <input type="number" placeholder="Abundancy of Isotope 1...(%)" id="input-abundancy1-el">
-            <p>%</p>
         </div>
         <div id="third-row">
             <input type="number" placeholder="Mass of Isotope 2..." id="input-mass2-el">
             <input type="number" placeholder="Abundancy of Isotope 2...(%)" id="input-abundancy2-el">
-            <p>%</p>
+            <p id="notice"><i>*abundancies must add to 100, as they are percentages.</i></p>
         </div>
         
         <datalist id="elements">
@@ -79,10 +84,8 @@
             <option value="Tin">
         </datalist>
 
+        <button id="submit-btn" onclick="getRelativeIsotopicMass()">Get Relative Atomic Mass</button>
         
-        <button id="rim-btn" onclick="getRelativeIsotopicMass()">Get Relative Atomic Mass</button>
-        
-
         <p id="result-el">Relative Atomic Mass: </p>
         <p id="previous-el">Previous: </p>
         <p id="error-el"></p>
@@ -93,5 +96,4 @@
 
     </section>
 </body>
-
 </html>
