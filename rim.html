@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="index.css">
     <script src="rim.js" defer></script>
 </head>
-<section id="main-container">
-        <h2 id="main-title">RAM - <em>Relative Atomic Mass</em></h2>
+<body>
+    
+    <p id="nav-el"><a href="index.html"><i>| back to home |</i></a></p>
+    <section id="main-container">
+        <h1 id="main-title">RAM - <em>Relative Atomic Mass</em></h1>
         <div id="first-row">
             <input list="elements" placeholder="Select Element..." id="input-element-el">
         </div>
@@ -44,15 +47,50 @@
             <option value="Argon">
             <option value="Potassium">
             <option value="Calcium">
+            <option value="Scandium">
+            <option value="Titanium">
+            <option value="Vanadium">
+            <option value="Chromium">
+            <option value="Manganese">
+            <option value="Iron">
+            <option value="Cobalt">
+            <option value="Nickel">
+            <option value="Copper">
+            <option value="Zinc">
+            <option value="Gallium">
+            <option value="Germanium">
+            <option value="Arsenic">
+            <option value="Selenium">
+            <option value="Bromine">
+            <option value="Krypton">
+            <option value="Rubidium">
+            <option value="Strontium">
+            <option value="Yttrium">
+            <option value="Zirconium">
+            <option value="Niobium">
+            <option value="Molybdenum">
+            <option value="Technetium">
+            <option value="Ruthenium">
+            <option value="Rhodium">
+            <option value="Palladium">
+            <option value="Silver">
+            <option value="Cadmium">
+            <option value="Indium">
+            <option value="Tin">
         </datalist>
 
-        <div class="buttons">
-            <button id="rfm-btn" onclick="getRelativeIsotopicMass()">Get Relative Atomic Mass</button>
-        </div>
+        
+        <button id="rim-btn" onclick="getRelativeIsotopicMass()">Get Relative Atomic Mass</button>
+        
 
         <p id="result-el">Relative Atomic Mass: </p>
-        
+        <p id="previous-el">Previous: </p>
         <p id="error-el"></p>
+
+        <div class="info-box">
+            <p>The <i>Relative Atomic Mass</i> of an element is found by the sum of the products of the masses of each of its <i>Isotopes</i> by their respective <i>abundancies</i> <strong> in percentages</strong></in>. Then, divide that value by 100. For example, Chlorine has <strong>2</strong> isotopes, <strong>Cl35 and Cl37</strong>. <strong>Cl35</strong> has <strong>75%</strong> abundance, and <strong>Cl37</strong> has <strong>25%</strong> abundance. We do 35x75 + 37x25. Divide it by 100. That gives us the relative atomic mass of Chlorine, which is <strong>35.5</strong>.</p>
+        </div>
+
     </section>
 </body>
 

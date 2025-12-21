@@ -1,20 +1,36 @@
+@font-face {
+  font-family: 'Caballar';
+  src: url('Caballar.ttf') format('truetype');
+}
 
 body {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Caballar', 'Courier New', Courier, monospace;
 }
+
+input::placeholder {
+    font-family: 'Caballar', 'Courier New', Courier, monospace;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+    color: #102a43;
+} 
 
 #main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 2em;
     gap: 1em;
-    background-color: #bababa;
+    background-color: #ffffff;
     padding-left: 1em;
     padding-right: 1em;
-}
+    border-top: 3px solid #2b4758;
+} 
 
 #user-inputs {
     display: flex;
@@ -23,27 +39,54 @@ body {
 }
 
 #number-of-element-input, #element-input, #input-mass1-el, #input-abundancy1-el, #input-mass2-el, #input-abundancy2-el {
-    border: 1.5px solid black;
+    border: 1.5px solid #c4d7e0;
     border-radius: 10px;
     font-size: 1rem;
     padding: 0.6rem;
-}
-
-.buttons {
-   border: 1.5px solid black;
-   max-width: 480px; 
-   margin: 0 auto;    
-
-}
-
-.buttons button {
-    display: block;
-    margin: 0.4rem auto;
-}
+} 
 
 #result-el {
     text-align: center;
     width: 100%;
     max-width: 480px;
     margin: 0.2rem auto 0;
+}
+
+#nav-el {
+    text-align: center;
+}
+
+.info-box {
+  width: 25em;
+  height: 12.5em;
+  background: #eaf6ff;
+  color: #0b3d55;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+} 
+
+#rim-button {
+    border: 3px dotted #2b6f91;
+    border-radius: 5px;
+    padding: 0.5em;
+    color: #0b3d55;
+} 
+
+#error-el {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+li {
+    margin: 50px 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
 }

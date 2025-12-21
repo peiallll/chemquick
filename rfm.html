@@ -11,8 +11,9 @@
 </head>
 
 <body>
+    <p id="nav-el"><a href="index.html"><i>| back to home |</i></a></p>
     <section id="main-container">
-        <h2 id="main-title">RFM - <em>Relative Formula Mass</em></h2>
+        <h1 id="main-title">RFM - <em>Relative Formula Mass</em></h1>
         <div id="user-inputs">
             <input type="number" placeholder="How Many?" size="9" id="number-of-element-input">
             <p>molecules of..</p>
@@ -40,15 +41,50 @@
             <option value="Argon">
             <option value="Potassium">
             <option value="Calcium">
+            <option value="Scandium">
+            <option value="Titanium">
+            <option value="Vanadium">
+            <option value="Chromium">
+            <option value="Manganese">
+            <option value="Iron">
+            <option value="Cobalt">
+            <option value="Nickel">
+            <option value="Copper">
+            <option value="Zinc">
+            <option value="Gallium">
+            <option value="Germanium">
+            <option value="Arsenic">
+            <option value="Selenium">
+            <option value="Bromine">
+            <option value="Krypton">
+            <option value="Rubidium">
+            <option value="Strontium">
+            <option value="Yttrium">
+            <option value="Zirconium">
+            <option value="Niobium">
+            <option value="Molybdenum">
+            <option value="Technetium">
+            <option value="Ruthenium">
+            <option value="Rhodium">
+            <option value="Palladium">
+            <option value="Silver">
+            <option value="Cadmium">
+            <option value="Indium">
+            <option value="Tin">
+
         </datalist>
 
         <div class="buttons">
             <button id="rfm-btn" onclick="getRelativeFormulaMass()">Get Relative Formula Mass</button>
         </div>
 
-        <p id="result-el">Relative Formula Mass: </p>
-        
+        <p id="result-el">Result: </p>
+        <p id="previous-el">Previous: </p>
         <p id="error-el"></p>
+
+        <div class="info-box">
+            <p>The <i>Relative Formula Mass</i> of a molecule is simply the product of the element's <i>mass</i> and the number of <i>molecules</i>. E.g. <strong>O2 = 32</strong></p>
+        </div>
     </section>
 </body>
 

@@ -1,6 +1,10 @@
 let errorEl = document.getElementById("error-el")
 let resultEl = document.getElementById("result-el")
 
+let arrValues = [];
+
+let previousEl = document.getElementById("previous-el")
+
 function isBlank() {
     for (let i = 0; i < arrValues.length; i++) {
         if (!arrValues[i].toString().trim()) {
@@ -29,23 +33,21 @@ function getRelativeIsotopicMass() {
     const isotope2AbundancyEl = document.getElementById("input-abundancy2-el")
     const isotope2Abundancy = Number(isotope2AbundancyEl.value);
 
-    
+    arrValues = [userElement, isotope1Mass, isotope1Abundancy, isotope2Mass, isotope2Abundancy]
+
     if (isBlank()) {
         resultEl.textContent = ""
         errorEl.textContent = "You left a field blank."
         return;
     }
 
-    arrValues = [userElement, isotope1Mass, isotope1Abundancy, isotope2Mass, isotope2Abundancy]
-    
     if (Number(isotope2Abundancy) + Number(isotope1Abundancy) != 100) {
-        resultEl.textContent = ""
+        resultEl.textContent = "Result: "
         errorEl.textContent = "Abundancies don't add up to 100%"
         return;
     }
     let numerator = (isotope1Mass * isotope1Abundancy) + (isotope2Mass * isotope2Abundancy)
     let total = numerator / 100
     resultEl.textContent = `Result: ${total}`
+    previousEl.textContent += total + " | "
 }
-
-let arrValues = [];
