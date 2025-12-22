@@ -106,13 +106,10 @@ li {
 }
 
 #navigation {
-    width: 100vw;
+    width: 100%;
     display: flex;
     gap: 1rem;
     justify-content: center;
-}
-
-#navigation {
     color: #0D0D0D;
 }
 
@@ -127,5 +124,6 @@ a {
 
 #gaslaw-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
