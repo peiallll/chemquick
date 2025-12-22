@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!-- PV = nRT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemQuick - The Gas Law</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <script src="gawlaw.js" defer></script>
+</head>
+
+<body>
+    <div id="navigation">
+        <p><a href="index.html"><i>back to home</i></a></p>
+        <p> | </p>
+        <p><a href="rfm.html"><i>Relative Formula Mass</i></a></p>
+        <p> | </p>
+        <p><a href="rim.html"><i>Relative Atomic Mass</i></a></p>
+        <p> | </p>
+        <p><a href="moles.html"><i>Moles</i></a></p>
+    </div>
+
+    <section id="main-container">
+        <h1 id="main-title">Gas Relationship - <em>The Ideal Gas Law</em></h1>
+        
+        <div id="gaslaw-row">
+            <input type="number" placeholder="Pressure (Pascals)" id="pressure-input-el">
+            <p> * </p>
+            <input type="number" placeholder="Volume (m³)" id="volume-input-el">
+            <p> = </p>
+            <input type="number" placeholder="Moles (mol)" id="number-input-el">
+            <p> * </p>
+            <p> 8.314 joules </p>
+            <p> * </p>
+            <input type="number" placeholder="Temperature (K)" id="temperature-input-el">
+        </div>
+        
+        <p id="notice"><i>*Leave ONE input field blank - this is the unkown you are trying to find.</i></p>
+
+        <div class="buttons">
+            <button id="submit-btn" onclick="getUnknown()">Get The Unkown (Value you left blank)</button>
+        </div>
+
+        <p id="result-el">Result: </p>
+        <p id="previous-el">Previous: </p>
+        <p id="error-el"></p>
+
+        <div class="info-box">
+            <p>The <i>Ideal Gas Law</i> is a fundamental equation in chemistry, describing how gases behave under a wide range of conditions, given by the formula PV=nRT. It shows a predictable relationship between <strong>Pressure, Volume, Temperature</strong> and <strong>amount</strong>. Changing one of the variables causes the rest to change to adapt to the conditions.</p>
+        </div>
+    </section>
+</body>
+</html>
