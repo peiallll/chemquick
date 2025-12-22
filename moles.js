@@ -26,6 +26,12 @@ function getMoles() {
         return;
     }
 
+    if (formulaMass === 0) {
+        resultEl.textContent = "Result: "
+        errorEl.textContent = "Can't divide by 0"
+        return;
+    }
+
     let molesRaw = mass / formulaMass
     let moles = molesRaw.toFixed(2);
 
