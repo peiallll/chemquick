@@ -9,13 +9,16 @@ body {
 
 input::placeholder {
     font-family: 'Caballar', 'Courier New', Courier, monospace;
+    color: #E6E6E6;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #f4f7fb;
-    color: #102a43;
+    background-color: #E6E6E6;
+    color: #E6E6E6;
+    border-color: goldenrod;
+    font-weight: 900;
 } 
 
 #main-container {
@@ -26,10 +29,10 @@ html, body {
     min-height: 100vh;
     padding-top: 2em;
     gap: 1em;
-    background-color: #f4f7fb;
+    background-color: #0D0D0D;
     padding-left: 1em;
     padding-right: 1em;
-    border-top: 3px solid black;
+    border-top: 3px solid goldenrod;
 } 
 
 #error-el {
@@ -50,18 +53,20 @@ html, body {
     margin: 0.2rem auto 0;
 }
 
-#number-of-element-input, #element-input, #input-mass1-el, #input-abundancy1-el, #input-mass2-el, #input-abundancy2-el, #mass-of-sample-input, #formula-mass-input {
-    border: 2px solid #c4d7e0;
+input {
+    border: 5px solid goldenrod;
+    background-color: #0A1A2F;
     border-radius: 10px;
     font-size: 1rem;
     padding: 0.6rem;
+    color: #E6E6E6
 } 
 
 .info-box {
   width: 25em;
   height: 12.5em;
-  background: #eaf6ff;
-  color: #0b3d55;
+  background: #0A1A2F;
+  border: 5px solid goldenrod;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -71,12 +76,13 @@ html, body {
 } 
 
 #submit-btn {
-    border: 1.5px solid black;
+    border: 3px solid goldenrod;
     border-radius: 1rem;
     padding: 0.5em;
-    background-color: #eaf6ff;
+    background-color: #0A1A2F;
     font-weight: bold;
     transition: transform 0.15s ease, background 0.2s ease;
+    color: #e6e6e6
 } 
 
 #submit-btn:hover { 
@@ -84,16 +90,14 @@ html, body {
     background: #9db6c9;
 }
 
-
-
-
 li {
     margin: 50px 0;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border: 1px solid black;
+    background-color: #0A1A2F;
+    border: 5px solid goldenrod;
     border-radius: 1rem;
 }
 
@@ -106,4 +110,17 @@ li {
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+#navigation {
+    color: #0D0D0D;
+}
+
+#navigation a {
+    color: #0D0D0D;
+    text-decoration: none;
+}
+
+a {
+    color: #E6E6E6;
 }

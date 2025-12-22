@@ -27,7 +27,7 @@ function getMoles() {
     }
 
     let molesRaw = mass / formulaMass
-    let moles = Number(molesRaw.toFixed(2));
+    let moles = molesRaw.toFixed(2);
 
     resultEl.textContent = `Result: ${moles} Moles`
     previousEl.textContent += moles + " | "
