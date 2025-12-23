@@ -19,6 +19,7 @@ html, body {
     color: #E6E6E6;
     border-color: goldenrod;
     font-weight: 900;
+    height: 100%;
 } 
 
 #main-container {
@@ -29,7 +30,9 @@ html, body {
     min-height: 100vh;
     padding-top: 2em;
     gap: 1em;
-    background-color: #0D0D0D;
+    background: linear-gradient(to bottom, black, #363636); 
+    background-repeat: no-repeat; 
+    background-size: cover;
     padding-left: 1em;
     padding-right: 1em;
     border-top: 3px solid goldenrod;
@@ -59,20 +62,27 @@ input {
     border-radius: 10px;
     font-size: 1rem;
     padding: 0.6rem;
-    color: #E6E6E6
+    color: #E6E6E6;
+
+    box-shadow: 
+        0 0 0.7rem darkred,
+        inset 0 0 1rem darkred;
 } 
 
 .info-box {
-  width: 25em;
-  height: 12.5em;
-  background: #0A1A2F;
-  border: 5px solid goldenrod;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2em;
+    width: 25em;
+    height: 12.5em;
+    background: #0A1A2F;
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+    box-shadow: 
+        0 0 0.7rem darkred,
+        inset 0 0 1rem darkred;
 } 
 
 #submit-btn {
@@ -82,7 +92,10 @@ input {
     background-color: #0A1A2F;
     font-weight: bold;
     transition: transform 0.15s ease, background 0.2s ease;
-    color: #e6e6e6
+    color: #e6e6e6;
+    box-shadow: 
+        0 0 0.7rem darkred,
+        inset 0 0 1rem darkred;
 } 
 
 #submit-btn:hover { 
@@ -99,6 +112,9 @@ li {
     background-color: #0A1A2F;
     border: 5px solid goldenrod;
     border-radius: 1rem;
+    box-shadow: 
+        0 0 0.7rem darkred,
+        inset 0 0 1rem darkred;
 }
 
 #notice {
