@@ -1,6 +1,7 @@
 let resultEl = document.getElementById("result-el")
 let previousEl = document.getElementById("previous-el")
 let errorEl = document.getElementById("error-el")
+let equationEl = document.getElementById("equation-el")
 
 const R = 8.314
 // PV = nRT
@@ -65,7 +66,7 @@ function getUnknown() {
     }
 
 
-    let P = Number(Praw)
+    let P = Number(Praw) // convert to numbers to avoid NaN when working with strings
     let V = Number(Vraw)
     let N = Number(Nraw)
     let T = Number(Traw)
@@ -73,18 +74,22 @@ function getUnknown() {
     let result = ""
     let unknown = ""
 
-    if (isBlank(Praw)) {
+    if (isBlank(Praw)) {  // check which is blank so chooses respective equation
         unknown = "Pascals"
         result = Number(findPressure(V,N,T,R).toFixed(2))
+        equationEl.textContent = "Current Equation: nRT/V"
     } else if (isBlank(Vraw)) {
         unknown = "m³"
         result = Number(findVolume(P,N,T,R).toFixed(2))
+        equationEl.textContent = "Current Equation: nRT/P"
     } else if (isBlank(Nraw)) {
         unknown = "Moles"
         result = Number(findNumberOfMoles(P,V,T,R).toFixed(2))
+        equationEl.textContent = "Current Equation: PV/RT"
     } else if (isBlank(Traw)) {
         unknown = "Kelvin"
         result = Number(findTemperature(P,V,N,R).toFixed(2))
+        equationEl.textContent = "Current Equation: PV/nR"
     } else {
         resultEl.textContent = "Result: "
         errorEl.textContent = "Leave ONE input field blank - the unknown that you are trying to solve."
